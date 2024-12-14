@@ -1,0 +1,93 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f43543; /* Red background */
+    height: 100vh; /* Ensure full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Wrapper styles */
+  .wrapper {
+    width: 400px;
+    border: 1px solid white;
+    position: relative; /* Change absolute to relative */
+    /* Centering handled by flexbox in the body */
+  }
+  
+  /* Container for the quote */
+  .container {
+    text-align: center;
+    background-color: #f43543; /* Red background for container */
+    padding: 50px 40px;
+    box-shadow: 0 20px 65px rgba(87, 11, 160, 0.5); /* Soft red shadow */
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .container:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 120%;
+    background-color: #ffffff;
+    z-index: -1;
+    top: -10%;
+    left: 10%;
+  }
+  
+  /* Quote text */
+  #quote {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .container p {
+    color: #fdd8d8;
+    line-height: 2;
+    font-size: 18px;
+  }
+  
+  .container h3 {
+    color: #ffffff;
+    margin: 20px 0 60px 0;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  /* Author styling */
+  #author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  #btn {
+    padding: 15px 45px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #ffffff; 
+    color: #f43543;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #btn:hover {
+    background-color: #45a049;
+    color: #ffffff;
+  }
+  

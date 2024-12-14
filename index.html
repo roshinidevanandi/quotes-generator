@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="random quote.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <p id="quote">
+          click the button to get the random quotes
+        </p>
+        <h3 id="author"></h3>
+        <button id="btn">click me</button>
+      </div>
+    </div>
+    <script>
+        let quote=document.getElementById("quote")
+        let author=document.getElementById("author")
+        let btn=document.getElementById("btn")
+ 
+            async function apicall(){
+            let data=await fetch("http://api.quotable.io/random")
+            let result=await data.json()
+            console.log(result)
+         const quoteContent=result.content;
+         const quoteAuthor=result.author;
+         quote.innerText=quoteContent;
+         author.innerText=quoteAuthor; 
+        } 
+           btn.addEventListener("click",apicall)
+    </script>
+  </body>
+</html>
+
